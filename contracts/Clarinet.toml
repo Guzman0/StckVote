@@ -1,0 +1,16 @@
+[project]
+name = "stackvote"
+description = ""
+authors = []
+telemetry = false
+cache_dir = "./.cache"
+
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
+
+[contracts.voting]
+path = "contracts/voting.clar"
+clarity_version = 6
+epoch = "4.0"
